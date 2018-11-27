@@ -25,6 +25,8 @@
     name: "{{ item.name }}"
     state: "{{ item.state }}"
   with_items:
+    - software-properties-common
+    - python
     - { state: "latest", name: "webmin" }
   notify: restart webmin
   tags: hswong3i.webmin
