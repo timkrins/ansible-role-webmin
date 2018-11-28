@@ -21,9 +21,7 @@
   tags: hswong3i.webmin
 
 - name: apt-get install
-  apt:
-    name: "{{ item.name }}"
-    state: "{{ item.state }}"
+  apt: name={{ item }} state=latest
   with_items:
     - software-properties-common
     - webmin
